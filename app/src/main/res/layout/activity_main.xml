@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.hbsx.mvvm.vm.TestViewModel" />
+
+        <variable
+            name="activity"
+            type="com.hbsx.mvvm.view.TestViewActivity" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".mvvm.MVVMActivity">
+
+        <EditText
+            android:id="@+id/et_Account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:hint="请输入账户名称" />
+
+        <Button
+            android:id="@+id/btn_getAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:onClick="@{viewModel.getData}"
+            android:text="查询账户信息" />
+
+        <TextView
+            android:id="@+id/tv_getResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="暂未获取账户信息"
+            android:text="@{viewModel.result}" />
+
+    </LinearLayout>
+</layout>
