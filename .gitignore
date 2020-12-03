@@ -1,5 +1,4 @@
 *.iml
-.gradle
 /local.properties
 /.idea/caches
 /.idea/libraries
@@ -10,4 +9,8 @@
 .DS_Store
 /build
 /captures
+/.idea
+/.gradle
+gradlew
+gradlew.bat
 .externalNativeBuild
